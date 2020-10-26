@@ -111,4 +111,12 @@ set -o vi
 alias tmux='TERM=screen-256color tmux -2'
 alias tmuxinator='TERM=screen-256color tmuxinator'
 
+#PYENV SETUP
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
